@@ -3,35 +3,22 @@ services:
   frontend_service:
     container_name: movie-gen_frontend_service
     build: ./service_1
-    image: yyasin/frontend_service_image:latest
+    image: jsaadat01/frontend_service_image:latest
     ports:
     - target: 5000
       published: 5000
-    environment:
-      DATABASE_URI: ${DATABASE_URI}
-      SECRET_KEY: ${SECRET_KEY}
-    deploy:
-      replicas: 2
-    
+  
   location_service:
     container_name: movie-gen_location_service
     build: ./service_2
-    image: yyasin/location_service_image:latest
-    deploy:
-      replicas: 2
+    image: jsaadat01/location_service_image:latest
 
   weather_service:
     container_name: movie-gen_weather_service
     build: ./service_3
-    image: yyasin/weather_service_image:latest
-    deploy:
-      replicas: 2
+    image: jsaadat01/weather_service_image:latest
 
   movie_service:
     container_name: movie-gen_movie_service
     build: ./service_4
-    image: yyasin/movie_service_image:latest
-    deploy:
-      replicas: 2
-    
-
+    image: jsaadat01/movie_service_image:latest
