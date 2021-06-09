@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the movie generation app</h1>
+    <h2>A random location and weather will be generated, and based on the a movie will be chosen for you.</h2>
+    <br>
+    <h3>Your location: {{location}} </h3>
+    <h3>Your weather: {{weather}} </h3> 
+    <h3>Movie: <b> {{movie}} </b> </h3>
+
+    <p>Previous refreshes:</p>
+    {% for movie in previous_movies %}
+        {{movie.id}}: {{movie.name}}. The location was: {{movie.location}}. The weather was {{movie.weather}} <br>
+
+    {% endfor %}
+
+  
+</body>
+</html>
