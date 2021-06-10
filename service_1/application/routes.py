@@ -1,4 +1,5 @@
-from application import app, db 
+from application import app, db
+from application.models import Movies
 from flask import render_template
 from sqlalchemy import desc
 import requests

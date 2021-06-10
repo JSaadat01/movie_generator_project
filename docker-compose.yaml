@@ -8,6 +8,9 @@ services:
     - target: 5000
       published: 5000
   
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+
   location_service:
     container_name: movie-gen_location_service
     build: ./service_2
