@@ -1,7 +1,7 @@
 #!/bin/bash
 # Installing dependencies 
 sudo apt-get update
-sudo apt-get install -y python3-venv python3-pip -y
+sudo apt-get install -y python3.6-venv python3-pip -y
 # Creating and Activating virtual environment "venv" and installing requirements
 python3 -m venv venv
 source venv/bin/activate
