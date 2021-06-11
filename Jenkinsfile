@@ -17,7 +17,7 @@ pipeline{
                 sh "echo build and push"
             }
         }
-        stage("Configure Swarm"){
+        stage("Configure Management (Ansible)"){
             steps{
                 // install ansible on jenkins machine for the Jenkins user
                 // ansible-playbook -i inventory.yaml playbook.yaml
