@@ -10,7 +10,7 @@ pipeline{
                 sh "bash jenkins/test.sh"
             }
         }
-        stage("Build and Push Images"){
+        stage("Build and Push Images"){ 
             steps{
                 sh "bash jenkins/build_images.sh"
             }
