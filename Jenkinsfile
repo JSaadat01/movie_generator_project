@@ -13,9 +13,7 @@ pipeline{
             steps{
                 // install docker and docker compose
                 // docker-compose build
-                // install docker and docker compose
                 // docker-compose push
-                sh "bash jenkins/build_images.sh"
                 sh "echo build and push"
             }
         }
@@ -32,7 +30,6 @@ pipeline{
                 // create swarm infrastructure
                 // copy over docker-compose.yaml
                 // ssh: docker stack deploy --compose-file docker-compose.yaml movie_generator_project
-                sh "bash jenkins/deploy_stack.sh"
                 sh "echo deploy"
             }
         }
