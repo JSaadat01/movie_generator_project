@@ -18,20 +18,16 @@
                 sh "bash jenkins/test.sh"
             }
         }
-        stage("Build Images"){
+        stage("Build and Push Images"){
             steps{
                 // install docker-compose
                 // docker-compose build
-                sh "docker-compose build"
+                // docker-compose push
+                sh "bash jenkins/build_images.sh"
             }
 
         }
-        stage("Push Images"){
-            steps{
-                // docker-compose push
-                sh "docker-compose push"
-            }
-        }
+        
         stage("Configure Management (Ansible)"){
             steps{
                 // install ansible on jenkins machine for the Jenkins user
