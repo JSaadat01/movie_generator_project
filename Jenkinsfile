@@ -18,12 +18,17 @@
                 sh "bash jenkins/test.sh"
             }
         }
-        stage("Build and Push Images"){
+        stage("Build Images"){
             steps{
-                // install docker and docker compose
+                // install docker-compose
                 // docker-compose build
-                // docker-compose push
                 sh "docker-compose build"
+            }
+
+        }
+        stage("Push Images"){
+            steps{
+                // docker-compose push
                 sh "docker-compose push"
             }
         }
