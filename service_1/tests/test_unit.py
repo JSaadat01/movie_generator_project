@@ -10,9 +10,9 @@ import requests_mock
 class TestBase(TestCase):
     def create_app(self):
         app.config.update(
-            SQLALCHEMY_DATABASE_URI=getenv("TEST_DATABASE_URI"),
+            SQLALCHEMY_DATABASE_URI="sqlite:///test.db",
             WTF_CSRF_ENABLED=False,
-            DEBUG=True
+            DEBUG=True,
         )
         return app
 
