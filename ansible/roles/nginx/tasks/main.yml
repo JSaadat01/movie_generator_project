@@ -1,18 +1,19 @@
 ---
-- name: Installing nginx using apt
+# tasks file for nginx
+- name: Install NGINX
   apt:
-    pkg:
-    - nginx
+    name: nginx
+    state: latest
     update_cache: true
-
-- name: Updating nginx.conf file
-  template:
-    src: nginx.conf
-    dest: /etc/nginx/nginx.conf
-  register: nginx_config
-
-- name: Reloading nginx
+- name: Start NGINX Service
   service:
     name: nginx
-    state: reloaded
-  when: nginx_config.changed
+    state: started
+- name: Add nginx conf
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+- name: Restart nginx
+  service: 
+    name: nginx
+    state: restarted
