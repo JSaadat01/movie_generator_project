@@ -1,7 +1,7 @@
  pipeline{
     agent any
     environment {
-        WORKSPACE = /movie_generator_project
+        WORKSPACE = /home/JSAADAT/movie_generator_project
         DOCKER_USERNAME = credentials('DOCKER_USERNAME')
         DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
 
