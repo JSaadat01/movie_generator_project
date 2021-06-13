@@ -3,6 +3,7 @@
     environment {
         DOCKER_USERNAME = credentials('DOCKER_USERNAME')
         DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
+
     }
     stages {
         stage('Install Requirements') {
@@ -32,7 +33,7 @@
             steps{
                 // install ansible on jenkins machine for the Jenkins user
                 // ansible-playbook -i inventory.yaml playbook.yaml
-                sh "cd ansible && ansible-playbook -i inventory playbook.yaml"
+                sh "cd ansible && ~/bin/ansible-playbook -i inventory playbook.yaml"
                 sh "echo config"
             }
         }
