@@ -1,9 +1,5 @@
 ---
 # tasks file for nginx
-
-- hosts: all
-  become: true
-  tasks:
   - name: Install NGINX
     apt:
       name: nginx
