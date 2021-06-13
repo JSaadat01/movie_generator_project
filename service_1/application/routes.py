@@ -8,9 +8,9 @@ import requests
 @app.route('/')
 @app.route('/home')
 def home():
-    location_response = requests.get('http://movie_generator_project_movie-gen_location_service:5000/location')
-    weather_response = requests.get('http://movie_generator_project_movie-gen_weather_service:5000/weather')
-    movie_response = requests.post("http://movie_generator_project_movie-gen_movie_service:5000/movie", json={"location":location_response.text, "weather":weather_response.text})
+    location_response = requests.get('http://movie-gen_location_service:5000/location')
+    weather_response = requests.get('http://movie-gen_weather_service:5000/weather')
+    movie_response = requests.post("http://movie-gen_movie_service:5000/movie", json={"location":location_response.text, "weather":weather_response.text})
 
     new_movie = Movies(name=movie_response.text,weather=weather_response.text,location=location_response.text)
     db.session.add(new_movie)
