@@ -33,7 +33,9 @@
             steps{
                 // install ansible on jenkins machine for the Jenkins user
                 // ansible-playbook -i inventory.yaml playbook.yaml
-                sh "sudo /usr/bin/ -i inventory.yaml playbook.yaml"
+                sh "chmod +x inventory.yaml"
+                sh "chmod +x playbook.yaml"
+                sh "/usr/bin/ -i inventory.yaml playbook.yaml"
                 sh "echo config"
             }
         }
