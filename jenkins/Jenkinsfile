@@ -1,7 +1,6 @@
  pipeline{
     agent any
     environment {
-        WORKSPACE = /home/JSAADAT/movie_generator_project
         DOCKER_USERNAME = credentials('DOCKER_USERNAME')
         DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
 
@@ -35,7 +34,7 @@
                 // install ansible on jenkins machine for the Jenkins user
                 // ansible-playbook -i inventory.yaml playbook.yaml
                 sh "cd ansible"
-                sh "/usr/bin/ansible-playbook -i inventory.yaml playbook.yaml"
+                sh "/JSAADAT/bin/ansible-playbook -i inventory.yaml playbook.yaml"
                 sh "echo config"
             }
         }
