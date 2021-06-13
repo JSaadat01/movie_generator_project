@@ -12,7 +12,7 @@
 - name: Add nginx conf
   copy:
     src: nginx.conf
-    dest:
+    dest: /etc/nginx/
 - name: Restart nginx
   service: 
     name: nginx
