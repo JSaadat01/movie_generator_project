@@ -11,4 +11,4 @@
 - hosts: nginx
   become: true
   roles:
-- nginx
+  - nginx
