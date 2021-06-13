@@ -33,7 +33,7 @@
             steps{
                 // install ansible on jenkins machine for the Jenkins user
                 // ansible-playbook -i inventory.yaml playbook.yaml
-                sh "/usr/bin/ansible-playbook -i inventory.yaml playbook.yaml"
+                sh "/usr/bin/ -i inventory.yaml playbook.yaml"
                 sh "echo config"
             }
         }
