@@ -45,6 +45,6 @@
                 sh "bash jenkins/deploy.sh"
             }
         }
-    }
+    } 
 
 }
