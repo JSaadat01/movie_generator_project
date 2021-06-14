@@ -61,7 +61,7 @@ For the sake of this project, only one ERD is needed. The image below shows the 
 ### CI Pipeline
 The image below shows the CI Pipeline used for this project. The first thing to be done is to grab a task from the trello board, then after completing that task, the code is pushed to GitHub which triggers a webhook. This then starts the Jenkins pipeline, first the tests are done. Then using Docker-compose, the images are built and pushed to Dockerhub. Jenkins then uses Ansible to configure external nodes, including installing docker on them. Anisble also configures an NGINX node to act as a load balancer. The user connects to the load balancer and recieves the webpage. 
 
-![CI-Pipeline](JPG)
+![CI-Pipeline](images/7_pipline.JPG)
 
 
 ## Software Infrastructure
