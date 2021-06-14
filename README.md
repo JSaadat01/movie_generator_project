@@ -93,17 +93,17 @@ pytest also produces a coverage report to show how much of the code in the app h
 
 A junit.xml is also produced which allows us to make use of a Jenkins plugin called Junit. This gives us a graphical view of the test results, making it easier to debug if any errors arise.
 
-![s1r](https://user-images.githubusercontent.com/73299366/105688687-cd559780-5ef1-11eb-87e4-df9a457ced6d.JPG)
-![s2r](https://user-images.githubusercontent.com/73299366/105688705-d0e91e80-5ef1-11eb-93c1-d04adf6281a5.JPG)
-![s3r](https://user-images.githubusercontent.com/73299366/105688708-d34b7880-5ef1-11eb-8394-0ebcb2c3e0c0.JPG)
-![s4r](https://user-images.githubusercontent.com/73299366/105688712-d47ca580-5ef1-11eb-963e-261c485018d1.JPG)
+![s1r](images/5_service_4.JPG)
+![s2r](images/5_service_3.JPG)
+![s3r](images/4_service_2.jpg)
+![s4r](images/3_service_1.JPG)
 
 ## Future Improvements 
 There are many improvements that can be made to the application. However, to name a few:
 
 * Implement an external api call to get the users location, and the weather 
-* Reduce downtime by using NEXUS as opposed to Dockerhub
-* Add more testing to make it even more robust, including integration testing 
+* Reduce downtime by using upgraded tools such as Kubernetes instead of swarm or Nexus instead of Dockerhub
+* Add even more testing because more testing = more reliability. Include integration testing on top of existing unit testing.
 
 ## Author
 Jalal Saadat 
