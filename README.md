@@ -33,8 +33,14 @@ The constraints are as follows:
 * Orchestration Tool: Docker Swarm
 * Reverse Proxy: NGINX
 
-### My Project Proposal 
+### My Project "Movie_Generator" 
 My project is such that a user will be given a random movie to based off of a given location and weather. The user will first connect to service 1 which will display the webpage up front, simultaneously, a GET request is made to service 2 and service 3 whereby each service will return a given location and weather. Finally a POST request is then sent to service 4 which is the information regarding the location and weather that was acquired from the  GET requests. Service 4 will then automatically select a film based on that information.
+
+* Service_1: Core template which illustrates the app.
+* Service_2: Generates a random City.
+* Service_3: Generates a random Weather.
+* Service_4: Generates a response based off of the information acquired from service_1 and service_2.
+
 
 ## Software Architecture 
 ### Project tracking
