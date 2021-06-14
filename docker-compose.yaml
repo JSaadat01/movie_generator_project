@@ -10,8 +10,8 @@ services:
   
     environment:
       DATABASE_URI: ${DATABASE_URI}
-    deploy:
-      replicas: 3
+    #deploy:
+      #replicas: 3
   location_service:
     container_name: movie-gen_location_service
     build: ./service_2
@@ -20,11 +20,11 @@ services:
     container_name: movie-gen_weather_service
     build: ./service_3
     image: jalal123/weather_service_image:latest
-    deploy:
-      replicas: 3
+    #deploy:
+      #replicas: 3
   movie_service:
     container_name: movie-gen_movie_service
     build: ./service_4
     image: jalal123/movie_service_image:latest
-    deploy:
-      replicas: 3
+    #deploy:
+      #replicas: 3

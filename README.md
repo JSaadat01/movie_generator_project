@@ -39,7 +39,7 @@ My project is such that a user will be given a random movie to based off of a gi
 ## Software Architecture 
 ### Project tracking
 In order to track the progress and criteria of my project Trello was utilized to for this particular project. Although it was optional and the specification wasn't too strict, I felt that Trello was appropriate due to its simplicity. You can find the link to my Trello board here:
-![kanban_board](https://trello.com/b/ateuNpyv/moviegeneratorapp)
+![kanban_board](images/2_trello_board_JPG.JPG)
 
 * Project Resources - Containing relevant links
 * User Stories - Each card has the format "As a [User]..., I want... [Feature], so that... [Details]"
@@ -52,11 +52,11 @@ In order to track the progress and criteria of my project Trello was utilized to
 ### Risk Assessment
 The risk assessment for this project can be found in full here: https://drive.google.com/file/d/1kQ4BIwtn_cRDNRL36GDttJMR94-5I0Nz/view?usp=sharing
 Here's a quick screenshot:
-![Risk_Assessment](.JPG)
+![Risk_Assessment](images/1_risk_assessment_.JPG)
 
 ### Entity Relationship Diagram
 For the sake of this project, only one ERD is needed. The image below shows the "Movie" ERD which contains the id, name, location and weather. This table will help us create data that persists in the database after each refresh.
-![Movie_erd](.JPG)
+![Movie_erd](images/6_ERD.JPG)
 
 ### CI Pipeline
 The image below shows the CI Pipeline used for this project. The first thing to be done is to grab a task from the trello board, then after completing that task, the code is pushed to GitHub which triggers a webhook. This then starts the Jenkins pipeline, first the tests are done. Then using Docker-compose, the images are built and pushed to Dockerhub. Jenkins then uses Ansible to configure external nodes, including installing docker on them. Anisble also configures an NGINX node to act as a load balancer. The user connects to the load balancer and recieves the webpage. 
