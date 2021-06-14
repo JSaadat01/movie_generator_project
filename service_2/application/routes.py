@@ -4,5 +4,5 @@ from random import choice
 
 @app.route('/location', methods=["GET"])
 def location():
-    location = ['London 24','New Delhi 24','Tokyo 24']
+    location = ['London 24','New Delhi 24','Tokyo 24',]
     return Response(choice(location), mimetype='text/plain')
