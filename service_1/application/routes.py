@@ -15,7 +15,6 @@ def home():
     new_movie = Movies(name=movie_response.text,weather=weather_response.text,location=location_response.text)
     db.session.add(new_movie)
     db.session.commit()
-
     previous_movies = Movies.query.order_by(desc('id')).limit(10).all() 
 
     return render_template('index.html', weather=weather_response.text, location=location_response.text, movie=movie_response.text, previous_movies=previous_movies)
