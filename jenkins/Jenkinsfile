@@ -42,7 +42,7 @@
                 // create swarm infrastructure
                 // copy over docker-compose.yaml
                 // ssh: docker stack deploy --compose-file docker-compose.yaml movie_generator_project
-                sh "echo bash jenkins/deploy.sh"
+                sh "bash jenkins/deploy.sh"
             }
         }
     }
